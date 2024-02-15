@@ -1,0 +1,129 @@
+html {
+	font-size: 16px;
+}
+
+.address {
+	text-align: end;
+}
+
+.address a {
+	color: inherit;
+	text-decoration: none;
+	/* убираем подчеркивание в ссылках */
+}
+
+.address a:hover {
+	color: red;
+	font-size: 101%;
+}
+
+.nav {
+	background-color: rgba(230, 230, 230, 200);
+	/* меняем цвет фона навигационного меню */
+	position: sticky;
+	top: 0rem;
+	/* закрепляем меню относительно верха, при скролле страницы */
+	z-index: 3;
+}
+
+.nav__list {
+	display: flex;
+	/* из вертикального положения элементов делаем вертикальный */
+	flex-flow: row nowrap;
+	/* запрещает перенос строки */
+	list-style: none;
+	/* убирает точки и цифры у списка */
+}
+
+.nav__item {
+	padding: 1rem 0;
+	/* задаем внетреннее пространство в навигационном меню */
+}
+
+.nav__link {
+	padding: 1rem;
+	/* задаем отступы границ текста в меню*/
+	text-decoration: none;
+	border-left: 1px solid #ccc;
+	/* разделяем меню вертикальной чертов */
+	color: #111;
+	/* стандартный цвет текста меню */
+}
+.nav__link:hover {
+	background-color: #f11c;
+	/* цвет блока меню при наведении */
+	color: #fff;
+	/* изменение текста на белый при наведении */
+}
+
+.hero {
+	background-image: url('/img/header.jpeg');
+	/* добавляем фоновое изображение */
+	background-attachment: fixed;
+	/* добавляет паралакс эффект и теперь при скролле страницы, картинка остается на месте */
+	background-repeat: no-repeat;
+	/* не дает картинке повторятся при большом размере экрана */
+	background-size: cover;
+	/* картинка должна занять все свободное пространство */
+}
+
+.header {
+	color: #fff;
+	/* текст на фоне изображения выводится белым цветом */
+	text-shadow: 3px 3px 3px #000;
+	/* тень текста над изображением */
+	display: flex;
+	/* заголовок слева - форма справа, а не по горизонтали */
+	justify-content: space-around;
+	/* задаем пространство между элементами / заголовок - форма */
+	padding: 3rem;
+	/* задаем отступы от границ */
+	background-color: #0a0a0a22;
+	/* делаем темней фон картинки */
+	align-items: center;
+	/* закрепляет наш заголовок */
+}
+
+.header-caption {
+	text-align: center;
+	/* помещает наш текст по центру */
+	position: sticky;
+	top: 2rem;
+	/* закрепляем заголовок с помощью position: sticky; но для закрепления нужно распределить слои с помощью z-index в .nav */
+}
+
+.hero-form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	/* пространство формы */
+	border: 0.25rem solid orange;
+	/* Задаем параметры форме ввода */
+	border-radius: 1rem;
+	padding: 2rem;
+	/* внутренние границы */
+	background-color: #0a0a0a7a;
+}
+
+.form-label {
+	font-size: 1.5rem;
+	/* меняем размер шрифта корневого элемента */
+}
+.form-input {
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	border: 0.25rem solid lightskyblue;
+	/* Задаем параметры форме ввода */
+	border-radius: 0.5rem;
+	/* cкругление границцы формы ввода */
+}
+
+.form-btn {
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	border: 0.25rem solid white;
+	border-radius: 0.5rem;
+	background-color: orange;
+	color: white;
+	/* параметры кнопки в форме */
+}
